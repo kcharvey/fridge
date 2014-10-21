@@ -1,5 +1,7 @@
 from fridge.settings.base import *
 
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', None)
+
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()
