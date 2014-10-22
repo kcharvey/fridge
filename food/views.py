@@ -1,3 +1,21 @@
-from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
+from .models import Food, Recipe
+from .serializers import FoodSerializer, RecipeSerializer
+
+
+class FoodViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows food in the fridge to view viewed or edited
+    """
+    queryset = Food.objects.all()
+    serializer_class = FoodSerializer
+
+
+class RecipeViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows recipes to be viewed or edited
+    """
+    queryset = Recipe.objects.all()
+    serializer_class = RecipeSerializer
+
