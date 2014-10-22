@@ -6,11 +6,11 @@ from .models import Food, Recipe
 class FoodSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Food
-        fields = ('name', 'quantity', 'unit')
+        fields = ('name', 'quantity', 'unit', 'url')
 
 
 class RecipeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Recipe
-        fields = ('name', 'ingredients')
+        fields = ('name', 'ingredients', 'url')
 
