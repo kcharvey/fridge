@@ -6,7 +6,7 @@ from .serializers import FoodSerializer, RecipeSerializer
 
 class FoodViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows food in the fridge to view viewed or edited
+    API endpoint that allows food in the fridge to be viewed or edited
     """
     queryset = Food.objects.all()
     serializer_class = FoodSerializer
