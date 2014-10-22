@@ -1,5 +1,6 @@
 from fridge.settings.base import *
 
+DEBUG = os.environ.get('DJANGO_DEBUG', False)
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', None)
 
 # Parse database configuration from $DATABASE_URL
